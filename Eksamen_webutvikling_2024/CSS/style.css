@@ -207,9 +207,9 @@ header {
 }
 
 .product-card p {
-    font-size: 1rem; /* Adjust price text size */
-    color: #555; /* Subtle gray color for price */
-    margin-top: 5px; /* Add spacing above price */
+    font-size: 1rem; 
+    color: #555; 
+    margin-top: 5px; 
 }
 
 /* Katagori */
@@ -589,10 +589,7 @@ img {
 
     header {
         display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        position: absolute;
     }
 
 
@@ -602,10 +599,7 @@ img {
 
     footer {
         display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        position: relative;
     }
 
     .midhead {
