@@ -571,33 +571,80 @@ img {
 
 
 /*MOBIL*/
+/* =======================
+   Responsive Styles
+======================= */
 @media only screen and (max-width: 800px) {
-    #menu {
-        display: flex; 
-    }
-
-    #grid-container {
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto auto; 
-    }
-
-    header, main, aside, footer {
-        grid-column: 1/2; 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer"
+        /* "aside" is removed on mobile */
+    ;
     }
 
     header {
-        grid-row: 1/2; 
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
-    
-    main {
-        grid-row: 2/3; 
+
+
+    aside[aria-label="Anmeldelser"] {
+        display: none;
     }
-    
-    aside {
-        display: none; 
-    }
-    
+
     footer {
-        grid-row: 3/4; 
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .midhead {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .righthead {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner-text {
+        font-size: 1.2rem;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    #produkt h2, #categories h2 {
+        font-size: 1.5rem;
+    }
+
+    #produkt button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
